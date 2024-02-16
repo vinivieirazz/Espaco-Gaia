@@ -1,0 +1,443 @@
+/*--------inicio do body-------------*/
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+  body {
+font-family: "Sora";
+width: 100%;
+height: 100vh;
+position: relative;
+background-color:  #513521;
+}/*# sourceMappingURL=style.css.map */
+
+button{
+  font-family: 'sora';
+  cursor: pointer;
+}
+
+/*---------fim do body--------*/
+
+/* ------inicio da header-------*/
+.he
+img{
+  width: 100%;
+}
+
+a{
+cursor: pointer;
+text-decoration: none;
+}
+
+header{
+  margin-top: 1px;
+  width: 100%;
+}
+
+.header-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo{
+  margin-left: 4%;
+  display: flex;
+  text-align: center;
+  width: 60%;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.header-icons{
+  width: 150px;
+  display: inline-block;
+  display: flex;
+  gap: 20px;
+}
+
+.header-button{
+  border: 1px solid white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  color: white;
+  background-color: transparent;
+  transition: background-color 0.8s;
+}
+
+.header-button:hover{
+  border: 1px solid black;
+  background-color: black;
+}
+
+
+i{
+  color: white;
+}
+
+
+.header-icons a:hover{
+  i{animation: translateY 0.8s infinite alternate;
+    color: black;
+  }
+}
+
+@keyframes translateY{
+  from{
+    transform: translateY(0) scale(1.1);
+  }
+  to{
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+
+@media screen and (max-width: 768px){
+  .header-content{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  i{
+    margin-top: 16px;
+    font-size: 46px;
+  }
+  }
+  .header-logo img{
+    width: 360px;
+    margin-top: 46px;
+  }
+
+  .header-button{
+    display: none;
+  }
+}
+
+
+/*----------fim da header--------*/
+
+/*-----------inicio home---------*/
+.container{
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+.bg-home:before{
+  content: '';
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(88, 50, 26, 0.1), #513223), url("/img/foto_massagem3.jpg");
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  opacity: 0.9;
+}
+
+/*---------fim da home-----------*/
+
+/* ---------inicio da hero-------*/
+
+.hero{
+  color: #e9e6de;
+  min-height: 80vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+
+h1{
+  text-align: center;
+  line-height: 150%;
+  max-width: 940px;
+  font-size: 48px;
+  }
+}
+
+p{
+  text-align: center;
+  margin: 14px 0;
+}
+
+.button-contact{
+  padding: 14px 28px;
+  color: black;
+  background-color: #e9e6de;
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 14px 0;
+
+}
+
+.button-contact:hover{
+  animation: scalebutton 0.8s alternate infinite;
+
+}
+
+@keyframes scaleButton{
+from{
+transform: scale(1);
+}
+to{
+transform: scale(1.07);
+}
+}
+
+@media screen and (max-width: 768px) {
+  .hero{
+    min-height: 60vh;
+
+    h1{
+      font-size: 34px;
+      padding: 0 14px;
+      width: 100%;
+    }
+    p{
+      font-size: 14px;
+    }
+  }
+  
+}
+
+@media screen and (max-width: 480px) {
+  .hero h1{
+    font-size: 24px;
+  }
+}
+
+/*-------------fim do hero--------*/
+
+
+
+/*-------produtos--------*/
+
+.produtos{
+background-color: #513521;
+overflow: hidden;
+color: #e9e6de;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.produtos-content{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+  padding: 34px 14px 64px 14px;
+
+  img{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 370px;
+  }
+}
+
+.produtos-content div{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  gap: 28px;
+  overflow: hidden;
+}
+
+.texto-produtos h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 24px;
+}
+
+.texto-produtos p{
+    margin-bottom: 14px;
+    line-height: 150%;
+    text-align: center;
+    max-width: 780px;
+}
+
+
+@media screen and  (max-width: 768px) {
+  .produtos-content div{
+    flex-direction: column;
+  }
+}
+
+/**--------fim dos produtos---------/
+
+/*---------serviços----------*/
+
+.services{
+  background-color: #e9e6de;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+
+.services-content h2{
+text-transform: uppercase;
+text-align: center;
+font-size: 38px;
+margin-bottom: 14px;
+}
+
+.services-content p{
+  line-height: 150%;
+  margin-bottom: 14px;
+  text-align: center;
+  max-width: 780px;
+}
+
+
+.massagens{ 
+display:flex;
+justify-content: center;
+align-items: center;
+gap: 28px;
+padding: 0 44px 34px 44px;
+}
+
+.massagem{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #e9e6de;
+  border-radius: 8px;
+  box-shadow: 0 -1px 17px -4px rgba(0, 0, 0, 0.5);
+
+  overflow: hidden;
+
+  img{
+    width: 100%;
+    max-width: 450px;
+    transition: transform 0.25s;
+  }
+}
+
+.massagem img:hover{
+transform: scale(1.3);
+z-index: 1;
+
+}
+
+.massagem-info{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  background-color: #e9e6de;
+  z-index: 99;
+}
+
+.massagem-info button{
+  color: #e9e6de;
+  background-color: #513521;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 0;
+}
+
+@media  screen and (max-width: 768px) {
+  .massagens{
+    flex-direction: column;
+  }
+}
+
+/*------fim dos serviços-----*/
+
+
+/*-------footer------*/
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 0;
+  gap: 18px;
+  color: #e9e6de;
+}
+
+.footer-icons{
+  display: flex;
+  gap: 8px;
+  color: #e9e6de;
+}
+
+.footer-logo{
+  margin-left: 27%;
+}
+
+/*---------fim do footer--------/*
+
+
+/* botão whatsapp*/
+.btn-whatsapp{
+  position: fixed;
+  bottom: 14px;
+  right: 24px;
+  z-index: 99;
+
+  img{
+    max-width: 74px;
+    transition: transform 0.4s;
+  }
+
+  img::hover{
+    transform: scale(1.1);
+  }
+}
+
+.btn-whatsapp .tooltip-text{
+  visibility: hidden;
+  position: absolute;
+  width: 120px;
+  top: 8px;
+  left: -144px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #e9e6de;
+  color: black;
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+
+.btn-whatsapp:hover .tooltip-text{
+visibility: visible;
+opacity: 1;
+}
+
+@media  screen and (max-width: 768px) {
+  .btn-whatsapp{
+    img{
+      max-width: 54px;
+    }
+  }
+}
+
+
+/*------fim do botao do wpp*/
+
+
+
+/*---------fim do codigo--------*/
